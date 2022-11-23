@@ -1,7 +1,7 @@
 import React from 'react';
-import c from './Messages.module.css';
+import c from './Profile.module.css';
 
-const Messages = () => {
+const Profile = () => {
   return (
     
     <main className={c.grid__main}>
@@ -31,4 +31,4 @@ const Messages = () => {
   );
 }
 
-export default Messages;
+export default Profile;

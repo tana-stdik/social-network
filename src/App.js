@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Header from './components/Header/Header';
-import Messages from './components/Messages/Messages';
+import Profile from './components/Profile/Profile';
 import NavBar from './components/NavBar/NavBar';
 
 const App = () => {
@@ -10,7 +10,7 @@ const App = () => {
       <div className='grid__body'>
         <Header/>
         <NavBar/>
-        <Messages/>
+        <Profile/>
       </div>
     </div>
   );
