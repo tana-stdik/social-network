@@ -1,0 +1,12 @@
+.grid__navbar {
+ background-color: aquamarine;
+ grid-area: navbar;
+}
+
+.grid__item {
+  color: white;
+}
+
+.grid__activ {
+  border: 2px solid blue;
+}
