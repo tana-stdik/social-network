@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
-import Header from './components/Header';
-import Messages from './components/Messages';
-import NavBar from './components/NavBar';
+import Header from './components/Header/Header';
+import Profile from './components/Profile/Profile';
+import NavBar from './components/NavBar/NavBar';
 
 const App = () => {
   return (
@@ -10,7 +10,7 @@ const App = () => {
       <div className='grid__body'>
         <Header/>
         <NavBar/>
-        <Messages/>
+        <Profile/>
       </div>
     </div>
   );

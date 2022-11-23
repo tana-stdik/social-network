@@ -1,0 +1,8 @@
+.grid__header {
+ background-color: aqua;
+ grid-area: header;
+}
+
+.grid__header img {
+  width: 100px;
+}

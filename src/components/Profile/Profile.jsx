@@ -1,9 +1,10 @@
 import React from 'react';
+import c from './Profile.module.css';
 
-const Messages = () => {
+const Profile = () => {
   return (
     
-    <main className='grid__main'>
+    <main className={c.grid__main}>
     <div>
       <img src='https://cdn.pixabay.com/photo/2014/09/14/18/04/dandelion-445228_1280.jpg' alt='nature'></img>
     </div>
@@ -30,4 +31,4 @@ const Messages = () => {
   );
 }
 
-export default Messages;
+export default Profile;
