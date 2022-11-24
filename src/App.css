@@ -10,3 +10,9 @@
   "header header"
   "navbar main";
 }
+.grid__main {
+  background-color: rgb(47, 224, 255);
+  grid-area: main;
+ }
+ 
+ 

@@ -3,16 +3,18 @@ import './App.css';
 import Header from './components/Header/Header';
 import Profile from './components/Profile/Profile';
 import NavBar from './components/NavBar/NavBar';
+import Dialogs from './components/Dialogs/Dialogs';
 
 const App = () => {
   return (
-    <div>
       <div className='grid__body'>
         <Header/>
         <NavBar/>
-        <Profile/>
+        <main className='grid__main'>
+          <Dialogs/>
+        </main>
+        {/* <Profile/> */}
       </div>
-    </div>
   );
 }
 
