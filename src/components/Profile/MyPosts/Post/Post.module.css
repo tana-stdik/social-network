@@ -1,0 +1,12 @@
+.item {
+  padding: 10px;
+}
+
+.item img {
+  width: 80px;
+}
+
+.item__mess {
+  width: 200px;
+  background-color: aqua;
+}
