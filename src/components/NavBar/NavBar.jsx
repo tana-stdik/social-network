@@ -1,25 +1,36 @@
 import React from 'react';
 import c from './NavBar.module.css';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
+
+let activeStyle = {
+  color: "gold",
+  textDecoration: "none",
+}
+let inActiveStyle = {
+  color: "white",
+  textDecoration: "none",
+}
+
+const setActive = ({isActive}) => isActive ? activeStyle : inActiveStyle;
 
 const NavBar = () => {
+
   return (
-    
     <nav className={c.grid__navbar}>
-    <div className={c.grid__item}>
-      <Link to ="/">Profile</Link>
+    <div>
+      <NavLink to ="/" style={setActive}>Profile</NavLink>
     </div>
-    <div className={`${c.grid__item} ${c.grid__activ}`}>
-    <Link to ="/message">Messanges</Link>
+    <div>
+    <NavLink to ="/message" style={setActive}>Messanges</NavLink>
     </div>
-     <div className={c.grid__item}>
-     <Link to ="/news">News</Link>
+     <div>
+     <NavLink to ="/news" style={setActive}>News</NavLink>
     </div>
-    <div className={c.grid__item}>
-      <Link to ="/music">Music</Link>
+    <div>
+      <NavLink to ="/music" style={setActive}>Music</NavLink>
     </div>
-    <div className={c.grid__item}>
-      <Link to ="/setting">Setting</Link>
+    <div>
+      <NavLink to ="/setting" style={setActive}>Setting</NavLink>
     </div>
   </nav>
   );

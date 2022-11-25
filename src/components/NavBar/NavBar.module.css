@@ -2,11 +2,3 @@
  background-color: rgb(58,207,188);
  grid-area: navbar;
 }
-
-.grid__item {
-  color: white;
-}
-
-.grid__activ {
-  border: 2px solid blue;
-}
