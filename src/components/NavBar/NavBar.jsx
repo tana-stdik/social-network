@@ -21,7 +21,7 @@ const NavBar = () => {
       <NavLink to ="/" style={setActive}>Profile</NavLink>
     </div>
     <div>
-    <NavLink to ="/message" style={setActive}>Messanges</NavLink>
+    <NavLink to ="/message" style={setActive}>Messages</NavLink>
     </div>
      <div>
      <NavLink to ="/news" style={setActive}>News</NavLink>
