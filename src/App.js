@@ -18,11 +18,11 @@ const App = () => {
         <main className='grid__main'>
         
           <Routes>
-            <Route path="/" element={<Profile/>}></Route>
-            <Route path="/message" element={<Dialogs/>}></Route>
-            <Route path="/news" element={<News/>}></Route>
-            <Route path="/music" element={<Music/>}></Route>
-            <Route path="/setting" element={<Setting/>}></Route>
+            <Route path="/" element={<Profile/>}/>
+            <Route path="/message" element={<Dialogs/>}/>
+            <Route path="/news" element={<News/>}/>
+            <Route path="/music" element={<Music/>}/>
+            <Route path="/setting" element={<Setting/>}/>
           </Routes>
           
         </main>
