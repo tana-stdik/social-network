@@ -5,21 +5,37 @@ import Message from "./Message/Message";
 
 const Dialogs = (props) => {
 
+  let dialogsData = [
+    {id: 1, name: 'Tania'},
+    {id: 2, name: 'Andriy'},
+    {id: 3, name: 'Olexiy'},
+    {id: 4, name: 'Lev'},
+    {id: 5, name: 'Nikola'},
+    {id: 6, name: 'Olia'},
+  ]
+
+  let messagesData = [
+    {id: 1, message: "Hi! How are you?"},
+    {id: 2, message: "Don't worry!"},
+    {id: 3, message: "I'm happy!"},
+    {id: 4, message: "Yo!"},
+  ]
+
   return (
     <div className={c.main__dialogs}>
       <div className={c.dialogs}>
-        <Dialog id='1' name='Tania'/>
-        <Dialog id='2' name='Andriy'/>
-        <Dialog id='3' name='Olexiy'/>
-        <Dialog id='4' name='Lev'/>
-        <Dialog id='5' name='Nikola'/>
-        <Dialog id='6' name='Olia'/>
+        <Dialog id={dialogsData[0].id} name={dialogsData[0].name}/>
+        <Dialog id={dialogsData[1].id} name={dialogsData[1].name}/>
+        <Dialog id={dialogsData[2].id} name={dialogsData[2].name}/>
+        <Dialog id={dialogsData[3].id} name={dialogsData[3].name}/>
+        <Dialog id={dialogsData[4].id} name={dialogsData[4].name}/>
+        <Dialog id={dialogsData[5].id} name={dialogsData[5].name}/>
       </div>
       <div className={c.messages}>
-      <Message message="Hi! How are you?"/>
-      <Message message="Don't worry!"/>
-      <Message message="I'm happy!"/>
-      <Message message="Yo!"/>
+      <Message message={messagesData[0].message}/>
+      <Message message={messagesData[1].message}/>
+      <Message message={messagesData[2].message}/>
+      <Message message={messagesData[3].message}/>
       </div>
     </div>
   );

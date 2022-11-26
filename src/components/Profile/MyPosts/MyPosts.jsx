@@ -3,6 +3,14 @@ import Post from './Post/Post';
 import c from './MyPosts.module.css';
 
 const MyPosts = () => {
+
+  let postData = [
+    {id: 1, message: "Hi! How are you?", likeCount: 4},
+    {id: 2, message: "I'm happy!", likeCount: 25},
+    {id: 3, message: "Don't worry!", likeCount: 23},
+    {id: 4, message: "Yo!", likeCount: 0},
+  ]
+
   return (
     
     <div className={c.myPosts}>
@@ -16,9 +24,10 @@ const MyPosts = () => {
       </div>
     </div>
       <div>
-        <Post message="Hi! How are you?" like="12"/>
-        <Post message="I'm happy!" like="25"/>
-        <Post message="Don't worry!" like="0"/>
+        <Post message={postData[0].message} like={postData[0].likeCount}/>
+        <Post message={postData[1].message} like={postData[1].likeCount}/>
+        <Post message={postData[2].message} like={postData[2].likeCount}/>
+        <Post message={postData[3].message} like={postData[3].likeCount}/>
       </div>
     </div>
   );
