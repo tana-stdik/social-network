@@ -1,42 +1,25 @@
 import React from "react";
+import Dialog from "./Dialog/Dialog";
 import c from './Dialogs.module.css';
+import Message from "./Message/Message";
 
 const Dialogs = (props) => {
+
   return (
     <div className={c.main__dialogs}>
       <div className={c.dialogs}>
-        <div className="item">
-          Tania
-        </div>
-        <div className="item">
-          Andriy
-        </div>
-        <div className="item">
-          Olexiy
-        </div>
-        <div className="item">
-          Lev
-        </div>
-        <div className="item">
-          Nikola
-        </div>
-        <div className="item">
-          Olia
-        </div>
+        <Dialog id='1' name='Tania'/>
+        <Dialog id='2' name='Andriy'/>
+        <Dialog id='3' name='Olexiy'/>
+        <Dialog id='4' name='Lev'/>
+        <Dialog id='5' name='Nikola'/>
+        <Dialog id='6' name='Olia'/>
       </div>
       <div className={c.messages}>
-        <div className="message">
-          Hi! Haw are you?
-        </div>
-        <div className="message">
-          Don't worry!
-        </div>
-        <div className="message">
-          I'm happy!
-        </div>
-        <div className="message">
-          
-        </div>
+      <Message message="Hi! How are you?"/>
+      <Message message="Don't worry!"/>
+      <Message message="I'm happy!"/>
+      <Message message="Yo!"/>
       </div>
     </div>
   );
