@@ -9,7 +9,8 @@ import News from './components/News/News';
 import Dialogs from './components/Dialogs/Dialogs';
 import Setting from './components/Setting/Setting';
 
-const App = () => {
+const App = (props) => {
+
   return (
   <BrowserRouter>
       <div className='grid__body'>
@@ -18,8 +19,8 @@ const App = () => {
         <main className='grid__main'>
         
           <Routes>
-            <Route path="/" element={<Profile/>}/>
-            <Route path="/message" element={<Dialogs/>}/>
+            <Route path="/" element={<Profile posts={props.posts}/>}/>
+            <Route path="/message" element={<Dialogs dialogs={props.dialogs} messages={props.messages}/>}/>
             <Route path="/news" element={<News/>}/>
             <Route path="/music" element={<Music/>}/>
             <Route path="/setting" element={<Setting/>}/>
