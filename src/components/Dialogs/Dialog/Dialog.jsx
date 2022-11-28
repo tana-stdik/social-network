@@ -13,7 +13,7 @@ textDecoration: "none",
 
 const setActive = ({isActive}) => isActive ? activeStyle : inActiveStyle;
 
-const Dialog = (props) => {
+const DialogItem = (props) => {
 
   let path = "/dialogs/" + props.id;
   return (
@@ -23,4 +23,4 @@ const Dialog = (props) => {
   );
 }
 
-export default Dialog;
+export default DialogItem;

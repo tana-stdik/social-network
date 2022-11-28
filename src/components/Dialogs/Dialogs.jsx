@@ -1,5 +1,5 @@
 import React from "react";
-import Dialog from "./Dialog/Dialog";
+import DialogItem from "./Dialog/Dialog";
 import c from './Dialogs.module.css';
 import Message from "./Message/Message";
 
@@ -21,21 +21,21 @@ const Dialogs = (props) => {
     {id: 4, message: "Yo!"},
   ]
 
+  let dialogsElements = dialogsData.map(d => (
+    <DialogItem id={d.id} name={d.name}/>
+  ))
+
+  let messagesElements = messagesData.map(m => (
+    <Message message={m.message}/>
+  ))
+
   return (
     <div className={c.main__dialogs}>
       <div className={c.dialogs}>
-        <Dialog id={dialogsData[0].id} name={dialogsData[0].name}/>
-        <Dialog id={dialogsData[1].id} name={dialogsData[1].name}/>
-        <Dialog id={dialogsData[2].id} name={dialogsData[2].name}/>
-        <Dialog id={dialogsData[3].id} name={dialogsData[3].name}/>
-        <Dialog id={dialogsData[4].id} name={dialogsData[4].name}/>
-        <Dialog id={dialogsData[5].id} name={dialogsData[5].name}/>
+      {dialogsElements}
       </div>
       <div className={c.messages}>
-      <Message message={messagesData[0].message}/>
-      <Message message={messagesData[1].message}/>
-      <Message message={messagesData[2].message}/>
-      <Message message={messagesData[3].message}/>
+       {messagesElements}
       </div>
     </div>
   );
