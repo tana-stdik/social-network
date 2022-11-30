@@ -19,8 +19,11 @@ const App = (props) => {
         <main className='grid__main'>
         
           <Routes>
-            <Route path="/" element={<Profile posts={props.posts}/>}/>
-            <Route path="/message" element={<Dialogs dialogs={props.dialogs} messages={props.messages}/>}/>
+            <Route path="/" element={<Profile 
+              posts={props.state.profilePage.posts}/>}/>
+            <Route path="/message" element={<Dialogs 
+              dialogs={props.state.messagesPage.dialogs} 
+              messages={props.state.messagesPage.messages}/>}/>
             <Route path="/news" element={<News/>}/>
             <Route path="/music" element={<Music/>}/>
             <Route path="/setting" element={<Setting/>}/>
