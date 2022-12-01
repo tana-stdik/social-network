@@ -2,13 +2,14 @@ import React from "react";
 import DialogItem from "./Dialog/Dialog";
 import c from './Dialogs.module.css';
 import Message from "./Message/Message";
+import NewMessage from "./NewMessage/NewMessage";
 
 const Dialogs = (props) => {
 
   let dialogsElements = props.dialogs.map(d => (
     <DialogItem id={d.id} name={d.name}/>
   ))
-
+  
   let messagesElements = props.messages.map(m => (
     <Message message={m.message}/>
   ))
@@ -17,6 +18,9 @@ const Dialogs = (props) => {
     <div className={c.main__dialogs}>
       <div className={c.dialogs}>
       {dialogsElements}
+      </div>
+      <div className={c.new__message}>
+      <NewMessage />
       </div>
       <div className={c.messages}>
        {messagesElements}
