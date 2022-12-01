@@ -5,7 +5,7 @@ import c from './MyPosts.module.css';
 const MyPosts = (props) => {
 
   let postElements = props.posts.map(p => (
-    <Post message={p.message} like={p.likeCount}/>
+    <Post avatarUrl={props.avatarUrl} message={p.message} like={p.likeCount}/>
   ))
 
   return (

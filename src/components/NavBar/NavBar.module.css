@@ -3,3 +3,16 @@
  grid-area: navbar;
  padding: 10px;
 }
+
+.navbar {
+  display: grid;
+  grid-template-columns: 100px;
+  grid-template-rows: 150px 1fr;
+  grid-template-areas: 
+  "menu"
+  "friends";
+}
+
+.navbar__menu {
+  grid-area: menu;  
+}
