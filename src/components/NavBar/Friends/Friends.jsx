@@ -1,6 +1,6 @@
 import React from 'react';
-import FriendsItem from '../FriendsItem/FriendsItem';
 import c from './Friends.module.css';
+import FriendsItem from './FriendsItem/FriendsItem';
 
 const Friends = (props) => {
   
