@@ -5,12 +5,12 @@ import c from './MyPosts.module.css';
 const MyPosts = (props) => {
 
   let postElements = props.posts.map(p => (
-    <Post avatarUrl={props.avatarUrl} message={p.message} like={p.likeCount}/>
+    <Post message={p.message} like={p.likeCount}/>
   ));
   let newPostElement = React.createRef();
   let addPost =  () => {
     let text = newPostElement.current.value;
-    alert(text);
+    props.addPost(text);
   }
 
   return (
