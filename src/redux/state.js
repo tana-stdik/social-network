@@ -1,3 +1,4 @@
+import { rerenderEntireTree } from '../render';
 
 let state = {
   navbarPage:{
@@ -20,7 +21,7 @@ let state = {
     {id: 1, message: "Hi! How are you?", likeCount: 4},
     {id: 2, message: "I'm happy!", likeCount: 25},
     {id: 3, message: "Don't worry!", likeCount: 23},
-    {id: 4, message: "Yo!", likeCount: 0},
+    {id: 4, message: "Yo!", likeCount: 576},
     ],
   },
   messagesPage:{
@@ -48,7 +49,8 @@ export let addPost = (postMessage) => {
     message: postMessage, 
     likeCount: 0
   }
- state.profilePage.posts.push(newPost) 
+ state.profilePage.posts.push(newPost);
+ rerenderEntireTree(state); 
 }
 
 export default state;
