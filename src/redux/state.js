@@ -1,3 +1,4 @@
+import { rerenderEntireTree } from '../render';
 
 let state = {
   navbarPage:{
@@ -20,8 +21,9 @@ let state = {
     {id: 1, message: "Hi! How are you?", likeCount: 4},
     {id: 2, message: "I'm happy!", likeCount: 25},
     {id: 3, message: "Don't worry!", likeCount: 23},
-    {id: 4, message: "Yo!", likeCount: 0},
+    {id: 4, message: "Yo!", likeCount: 576},
     ],
+    newPostText: '',
   },
   messagesPage:{
     dialogs: [
@@ -39,6 +41,25 @@ let state = {
     {id: 4, message: "Yo!"},
     ],
   }
+}
+
+window.state = state;
+
+export let addPost = () => {
+
+  let newPost = {
+    id: 7, 
+    message: state.profilePage.newPostText, 
+    likeCount: 0
+  }
+ state.profilePage.posts.push(newPost);
+ state.profilePage.newPostText = '';
+ rerenderEntireTree(state); 
+}
+
+export let updateNewPostText = (newText) => {
+  state.profilePage.newPostText = newText;
+  rerenderEntireTree(state);
 }
 
 export default state;
