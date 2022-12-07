@@ -23,6 +23,7 @@ let state = {
     {id: 3, message: "Don't worry!", likeCount: 23},
     {id: 4, message: "Yo!", likeCount: 576},
     ],
+    newPostText: '',
   },
   messagesPage:{
     dialogs: [
@@ -42,15 +43,23 @@ let state = {
   }
 }
 
-export let addPost = (postMessage) => {
+window.state = state;
+
+export let addPost = () => {
 
   let newPost = {
     id: 7, 
-    message: postMessage, 
+    message: state.profilePage.newPostText, 
     likeCount: 0
   }
  state.profilePage.posts.push(newPost);
+ state.profilePage.newPostText = '';
  rerenderEntireTree(state); 
+}
+
+export let updateNewPostText = (newText) => {
+  state.profilePage.newPostText = newText;
+  rerenderEntireTree(state);
 }
 
 export default state;
